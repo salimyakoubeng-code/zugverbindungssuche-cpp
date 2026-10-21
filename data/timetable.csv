@@ -1,0 +1,9 @@
+train,from,to,departure,arrival
+RE101,Leverkusen Mitte,Koeln Hbf,08:05,08:25
+ICE201,Koeln Hbf,Duesseldorf Hbf,08:35,09:00
+RE102,Leverkusen Mitte,Duesseldorf Hbf,08:15,08:50
+RE103,Leverkusen Mitte,Duisburg Hbf,08:30,09:20
+RE202,Duesseldorf Hbf,Duisburg Hbf,09:00,09:20
+RE203,Duisburg Hbf,Essen Hbf,09:30,09:45
+ICE204,Koeln Hbf,Essen Hbf,08:40,09:35
+RE104,Leverkusen Mitte,Koeln Hbf,23:40,00:05
