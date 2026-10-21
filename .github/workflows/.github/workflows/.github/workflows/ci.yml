@@ -1,0 +1,30 @@
+name: C++ Build und Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Repository herunterladen
+        uses: actions/checkout@v4
+
+      - name: CMake konfigurieren
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Programm kompilieren
+        run: cmake --build build --config Release
+
+      - name: Tests ausführen
+        run: ctest --test-dir build -C Release --output-on-failure
